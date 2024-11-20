@@ -823,37 +823,37 @@ const iconDescriptions = {
     content:
       "Smart transportation in a smart city involves integrating advanced technologies to improve urban mobility, reduce congestion, and enhance efficiency across transportation systems. This typically includes using IoT sensors, real-time data analytics, and AI to monitor and manage traffic flow, optimize public transit schedules, and enable smart parking solutions. Autonomous vehicles, shared mobility services, and electrified transport also contribute to a more sustainable and accessible city, while apps and digital platforms provide real-time information, enabling residents to make informed travel decisions. The goal of smart transportation is to create a more connected, efficient, and eco-friendly urban environment.",
   },
-  icon5: {
+  icon6: {
     img: "../assets/foto/power-plant.png",
     title: "Smart Energy",
     content:
       "Smart energy in a smart city refers to the integration of advanced technologies and data analytics to optimize energy generation, distribution, and consumption. This approach incorporates renewable energy sources, such as solar and wind, alongside traditional power systems, allowing for a more resilient and sustainable energy grid. Smart meters and IoT devices provide real-time monitoring of energy usage, enabling consumers and utilities to make informed decisions that enhance efficiency and reduce costs. Demand response systems adjust energy consumption during peak times to alleviate strain on the grid. Additionally, smart energy systems facilitate energy storage solutions and electric vehicle integration, promoting a cleaner urban environment and supporting the transition to a low-carbon economy. By leveraging smart technology, cities can improve energy efficiency, enhance grid reliability, and reduce environmental impacts.",
   },
-  icon6: {
+  icon7: {
     img: "../assets/foto/hospital.png",
     title: "Smart Health.",
     content:
       "Smart health in a smart city leverages digital health technologies, data analytics, and interconnected systems to provide accessible, efficient, and personalized healthcare services. Through IoT devices, wearable tech, and telemedicine, residents can monitor their health and access medical services remotely, reducing the strain on physical healthcare facilities. Smart health initiatives use real-time data to track disease outbreaks, manage public health resources, and support emergency response systems. These systems often integrate with other smart city infrastructure, enabling better health outcomes and fostering a proactive, preventative approach to urban healthcare.",
   },
-  icon7: {
+  icon8: {
     img: "../assets/foto/smart-house.png",
     title: "Smart House",
     content:
       "A smart house in a smart city is a residential space equipped with advanced technologies that automate and enhance daily living. These homes utilize Internet of Things (IoT) devices to enable seamless connectivity and control over various systems, including lighting, heating, security, and appliances. Residents can manage their home environment remotely via smartphones or voice-activated assistants, allowing for energy efficiency, improved security, and personalized comfort. Smart houses often incorporate renewable energy sources, such as solar panels, and utilize smart meters to monitor and optimize energy consumption. By integrating with the broader smart city infrastructure, smart houses contribute to sustainability goals and create a more efficient, responsive urban living experience.",
   },
-  icon8: {
+  icon5: {
     img: "../assets/foto/parking.png",
     title: "Smart Parking",
     content:
       "Smart parking in a smart city uses technology to optimize the use of parking spaces. It integrates sensors, IoT devices, and data analytics to monitor parking occupancy in real-time. Drivers can find available spots through a mobile app, which provides directions and allows for contactless payment. The system can also manage pricing based on demand, offer reservations, and alert users when their parking session is about to expire. This reduces congestion, improves traffic flow, and enhances the overall parking experience.",
   },
-  icon9: {
+  icon10: {
     img: "../assets/foto/Taman.png",
     title: "Green Park.",
     content:
       "A green park in a smart city is a sustainable, tech-enhanced public space designed to promote environmental health, biodiversity, and community well-being. These parks often feature native plantings, energy-efficient lighting, and smart irrigation systems that conserve water.IoT sensors monitor environmental factors like air quality, soil moisture, and visitor traffic to optimize park maintenance and support ecological balance.Green parks also provide recreational areas, walking trails, and spaces for outdoor activities, helping to improve urban air quality, reduce the heat island effect, and offer residents a natural retreat within the city.By integrating green spaces with smart city technology, green parks support sustainability, enhance urban resilience, and foster a connection between residents and nature.",
   },
-  icon10: {
+  icon9: {
     img: "../assets/foto/parking.png",
     title: "Smart Parking",
     content:
