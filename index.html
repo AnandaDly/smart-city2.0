@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Project</title>
+    <link rel="stylesheet" href="./assets/style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Concert+One&family=Jockey+One&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Three.js canvas will be inserted here -->
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <img
+            class="logo"
+            src="./assets/Logo/logo.png"
+            alt="Smart City Logo"
+          />
+          <!-- <a href="#" class="logo">Windland</a> -->
+        </div>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#music" id="toggle-music">🎵</a></li>
+            <!-- <li><a href="#theme">🌙</a></li> -->
+            <li><a href="#menu" id="toggle-menu">☰</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="card" id="card">
+        <div class="card-header" id="card-header">
+          Description
+          <button class="close-button" id="closeButton">X</button>
+        </div>
+        <div class="card-body">
+          <div class="image-container">
+            <img src="" alt="" class="icon-image" />
+          </div>
+          <div class="content-container">
+            <div class="building" id="title">title</div>
+            <div class="family-info">
+              <p class="content" id="content">content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="about_us" class="about_us" style="display: none">
+        <div class="card-about">
+          <div class="card-header-about">
+            Smart City
+            <button class="close-button-about">X</button>
+          </div>
+          <div class="card-body-about">
+            <div class="content-about">
+              A smart city is an urban area that uses advanced technologies and
+              data-driven solutions to enhance the quality of life for its
+              residents, improve sustainability, and optimize urban operations.
+              It integrates the Internet of Things (IoT), artificial
+              intelligence (AI), and big data to create a more efficient,
+              sustainable, and connected environment.
+              <br />
+              <br />
+              This project is made to introduce the smart city concept to a wide
+              audience, especially the younger generation. With a cartoonish
+              low-poly approach, we hope the smart city concept becomes easier
+              to understand.
+              <br />
+              <br />
+              Made with: Three.js & Blender.<br />
+              3D Models by Muhammad Farhan Lubis.<br />
+              Programming by Rizky Ananda Alamsyah Daulay.<br />
+              Design by Muhammad Farhan Lubis & Rizky Ananda Alamsyah Daulay.<br />
+              "Smart City" Logo by Muhammad Reza Pahlevi.<br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

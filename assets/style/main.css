@@ -1,0 +1,627 @@
+body {
+    font-family: "Concert One", serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+}
+
+.navbar-brand .logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar-brand img {
+    width: 50px;
+    /* Atur ukuran gambar sesuai kebutuhan */
+    height: auto;
+    /* Spasi antara gambar dan teks */
+}
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.navbar-links ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+    opacity: 0.7;
+}
+
+.about_us {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: center;
+    /* Vertical centering */
+    padding: 20px;
+    /* Adds space on smaller screens */
+    overflow-y: auto;
+    /* Enables scrolling if content overflows */
+}
+
+.card-about {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid #2f373f;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+    /* Makes it responsive */
+    padding: 10px;
+    margin: auto;
+    /* Ensures proper spacing on smaller screens */
+}
+
+.card-header-about {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button-about {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.card-body-about {
+    display: flex;
+    flex-direction: column;
+    /* Aligns content vertically */
+    padding: 25px;
+    padding-top: 10px;
+}
+
+.content-about {
+    font-family: "Jockey One", sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 5px;
+    border-radius: 5px;
+    max-height: 400px;
+    /* Limits height for scrollability */
+    overflow-y: auto;
+}
+
+.content-about::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content-about::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.content-about::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #666, #444);
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.content-about::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #777, #555);
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border-top: 2px solid #2f373f;
+    /* Ketebalan border atas */
+    border-right: 8px solid #2f373f;
+    /* Ketebalan border kanan */
+    border-bottom: 8px solid #2f373f;
+    /* Ketebalan border bawah */
+    border-left: 2px solid #2f373f;
+    /* Ketebalan border kiri */
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Letakkan di tengah */
+    padding: 0px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.card-header {
+    background-color: rgb(113, 148, 108);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: light;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: color 0.2s, transform 0.2s ease;
+}
+
+.close-button:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    padding-top: 10px;
+
+}
+
+.image-container {
+    flex: 0 0 auto;
+    /* Gambar tidak meluas */
+}
+
+.icon-image {
+    width: 150px;
+    /* Atur lebar gambar */
+    height: auto;
+    border-radius: 8px;
+    /* Opsional: tambahkan sudut melengkung */
+}
+
+.family-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.family-image img {
+    max-width: 180px;
+    border-radius: 10px;
+}
+
+.family-info {
+    flex: 1;
+    border-radius: 8px;
+}
+
+.family-info h2 {
+    margin-top: 0;
+}
+
+.family-info p {
+    margin: 10px 0;
+}
+
+.building {
+    font-weight: light;
+    font-family: "Jockey One", sans-serif;
+    font-size: 25px;
+}
+
+/* Content */
+.content {
+    font-family: "Jockey One", sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+/* Custom Scrollbar Styles */
+.content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #666, #444);
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #777, #555);
+}
+
+
+/* Tablet view (screen width between 768px and 1024px) */
+@media (max-width: 1024px) {
+    #about_us {
+        padding: 20px;
+        /* Add padding to prevent content from touching the edges */
+    }
+
+    .card-about {
+        width: 90%;
+        max-width: 800px;
+        /* Increase max width slightly for tablets */
+        padding: 15px;
+    }
+
+    .card-header-about {
+        font-size: 1.6rem;
+        /* Smaller font size for header */
+    }
+
+    .card-body-about {
+        font-size: 1rem;
+        /* Adjust font size for tablets */
+    }
+}
+
+/* Mobile view (screen width between 576px and 768px) */
+@media (max-width: 768px) {
+    #about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card-about {
+        width: 100%;
+        /* Full width for mobile */
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .card-header-about {
+        font-size: 1.3rem;
+        /* Smaller font size for mobile */
+    }
+
+    .close-button-about {
+        font-size: 1.2rem;
+        /* Smaller close button */
+    }
+
+    .card-body-about {
+        font-size: 0.9rem;
+        /* Smaller font size for mobile */
+    }
+}
+
+/* Extra small devices (screen width less than 576px) */
+@media (max-width: 576px) {
+    #about_us {
+        padding: 5px;
+        /* Less padding on extra small screens */
+    }
+
+    .card-about {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .card-header-about {
+        font-size: 1.2rem;
+        /* Further reduce header font size */
+    }
+
+    .close-button-about {
+        font-size: 1rem;
+        /* Small close button */
+    }
+
+    .card-body-about {
+        font-size: 0.8rem;
+        /* Small font size for very small devices */
+    }
+}
+
+@media (max-width: 412px) and (max-height: 914px) {
+    #about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card-about {
+        width: 100%;
+        /* Full width on small screens */
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .card-header-about {
+        font-size: 1.4rem;
+        /* Adjust header size */
+        padding: 10px 0;
+        /* Add space around header */
+    }
+
+    .close-button-about {
+        font-size: 1.3rem;
+        /* Make close button smaller */
+    }
+
+    .card-body-about {
+        font-size: 0.9rem;
+        /* Smaller font size for mobile */
+        padding: 10px;
+        line-height: 1.4;
+        /* Reduce line height for better fitting */
+    }
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+    #about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card-about {
+        width: 100%;
+        /* Full width on small screens */
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .card-header-about {
+        font-size: 1.4rem;
+        /* Adjust header size */
+        padding: 10px 0;
+        /* Add space around header */
+    }
+
+    .close-button-about {
+        font-size: 1.3rem;
+        /* Make close button smaller */
+    }
+
+    .card-body-about {
+        font-size: 0.9rem;
+        /* Smaller font size for mobile */
+        padding: 10px;
+        line-height: 1.4;
+        /* Reduce line height for better fitting */
+    }
+}
+
+@media (max-width: 820px) and (max-height: 1180px) {
+    #about_us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .card-about {
+        width: 100%;
+        /* Full width on small screens */
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .card-header-about {
+        font-size: 1.4rem;
+        /* Adjust header size */
+        padding: 10px 0;
+        /* Add space around header */
+    }
+
+    .close-button-about {
+        font-size: 1.3rem;
+        /* Make close button smaller */
+    }
+
+    .card-body-about {
+        font-size: 0.9rem;
+        /* Smaller font size for mobile */
+        padding: 10px;
+        line-height: 1.4;
+        /* Reduce line height for better fitting */
+    }
+}
+
+/* Tablet view (screen width between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .card {
+        width: 90%;
+        max-width: 800px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .card-header {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .card-body {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .icon-image {
+        width: 120px;
+        margin: auto;
+    }
+
+    .content {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile view (screen width between 576px and 768px) */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .card-header {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+
+    .close-button {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .icon-image {
+        width: 100px;
+        margin: auto;
+    }
+
+    .content {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* Extra small devices (screen width less than 576px) */
+@media (max-width: 576px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .card-header {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .close-button {
+        font-size: 0.9rem;
+    }
+
+    .card-body {
+        padding: 5px;
+    }
+
+    .icon-image {
+        width: 80px;
+        margin: auto;
+    }
+
+    .content {
+        font-size: 0.8rem;
+    }
+}
+
+/* Specific resolutions (iPhone X, Pixel 3XL, etc.) */
+@media (max-width: 820px) and (max-height: 1180px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card-header {
+        font-size: 1.4rem;
+    }
+
+    .card-body {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card-header {
+        font-size: 1.2rem;
+    }
+
+    .card-body {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
